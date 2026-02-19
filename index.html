@@ -11,5 +11,21 @@
     <h1>Staging</h1>
     <p>staging</p>
   </main>
+  <script>
+    (function(){
+      const css = `
+        :root{--bg:#0f1724;--fg:#e6eef8;--accent:#38bdf8}
+        html,body{height:100%;margin:0}
+        body{background:linear-gradient(180deg,var(--bg),#071019);color:var(--fg);font-family:Inter,system-ui,Segoe UI,Arial,sans-serif;display:flex;align-items:center;justify-content:center}
+        main{max-width:720px;padding:32px;border-radius:12px;background:rgba(255,255,255,0.03);box-shadow:0 6px 24px rgba(2,6,23,0.6);backdrop-filter: blur(4px);text-align:center}
+        h1{margin:0 0 8px;font-size:2.4rem;color:var(--accent)}
+        p{margin:0;color:rgba(230,238,248,0.9)}
+      `;
+      const style = document.createElement('style');
+      style.id = 'js-styles';
+      style.textContent = css;
+      document.head.appendChild(style);
+    })();
+  </script>
 </body>
 </html>
